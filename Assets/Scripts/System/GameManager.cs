@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    private static UIHandler ui;
     private static int score;
     private static bool gameActive;
 
     void Start()
     {
+        ui = FindObjectOfType<UIHandler>();
         score = 0;
         gameActive = true;
     }
@@ -16,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public static void IncrementScore()
     {
         score++;
+        ui.UpdateScoreDisplay();
     }
 
     public static int GetScore()
@@ -26,6 +29,10 @@ public class GameManager : MonoBehaviour {
     public static void SetGameActive (bool newState)
     {
         gameActive = newState;
+        if (newState == false)
+        {
+            ui.ShowGameOver();
+        }
     }
 
 	public static bool IsGameActive()

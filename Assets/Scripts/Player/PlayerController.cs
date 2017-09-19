@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (GameManager.IsGameActive())
         {
-            if (other.CompareTag("Pipe"))
+            if (other.CompareTag("Pipe") || other.CompareTag("Ground"))
             {
                 GameManager.SetGameActive(false);
             }
