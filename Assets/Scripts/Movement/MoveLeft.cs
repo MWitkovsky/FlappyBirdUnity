@@ -6,10 +6,10 @@ public class MoveLeft : MonoBehaviour {
 
     public float moveSpeed;
 	
-	void FixedUpdate () {
+	void Update () {
         if (GameManager.IsGameActive())
         {
-            transform.Translate(Vector3.left * moveSpeed * Time.fixedDeltaTime);
+            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
 	}
 }

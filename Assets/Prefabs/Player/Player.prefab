@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flapKey: 32
+  resetKey: 114
 --- !u!114 &114362214600889310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea14bac80028424cacc89e1d5a5b817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flapForce: 12
+  flapForce: 11
 --- !u!212 &212419273231438638
 SpriteRenderer:
   m_ObjectHideFlags: 1

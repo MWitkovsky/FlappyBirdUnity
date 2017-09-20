@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -38,5 +39,10 @@ public class GameManager : MonoBehaviour {
 	public static bool IsGameActive()
     {
         return gameActive;
+    }
+
+    public static void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
